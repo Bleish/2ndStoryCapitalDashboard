@@ -9,48 +9,21 @@
 import UIKit
 
 class CompanyViewController: UIViewController {
-    @IBOutlet var metricView1: KeyMetricView!
-    @IBOutlet var metricView2: KeyMetricView!
-    @IBOutlet var metricView3: KeyMetricView!
-    @IBOutlet var metricView4: KeyMetricView!
-    @IBOutlet var metricView5: KeyMetricView!
-    @IBOutlet var metricView6: KeyMetricView!
-    @IBOutlet var metricView7: KeyMetricView!
-    @IBOutlet var metricView8: KeyMetricView!
-    @IBOutlet var metricView9: KeyMetricView!
-    @IBOutlet var metricView10: KeyMetricView!
-    @IBOutlet var metricView11: KeyMetricView!
-    @IBOutlet var metricView12: KeyMetricView!
+    @IBOutlet var capRateView: AdminKeyMetricView!
+    @IBOutlet var cashRetView: AdminKeyMetricView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         let cRad: CGFloat = 92.0
-        metricView1.layer.cornerRadius = cRad
-        metricView2.layer.cornerRadius = cRad
-        metricView3.layer.cornerRadius = cRad
-        metricView4.layer.cornerRadius = cRad
-        metricView5.layer.cornerRadius = cRad
-        metricView6.layer.cornerRadius = cRad
-        metricView7.layer.cornerRadius = cRad
-        metricView8.layer.cornerRadius = cRad
-        metricView9.layer.cornerRadius = cRad
-        metricView10.layer.cornerRadius = cRad
-        metricView11.layer.cornerRadius = cRad
-        metricView12.layer.cornerRadius = cRad
+        capRateView.layer.cornerRadius = cRad
+        cashRetView.layer.cornerRadius = cRad
         
-        metricView1.layer.cornerRadius = cRad
-        metricView2.layer.cornerRadius = cRad
-        metricView3.layer.cornerRadius = cRad
-        metricView4.layer.cornerRadius = cRad
-        metricView5.layer.cornerRadius = cRad
-        metricView6.layer.cornerRadius = cRad
-        metricView7.layer.cornerRadius = cRad
-        metricView8.layer.cornerRadius = cRad
-        metricView9.layer.cornerRadius = cRad
-        metricView10.layer.cornerRadius = cRad
-        metricView11.layer.cornerRadius = cRad
-        metricView12.layer.cornerRadius = cRad
+        cashRetView.layer.cornerRadius = cRad
+        cashRetView.layer.cornerRadius = cRad
+        
+        capRateView.statLbl.text = "8.33%"
+        cashRetView.statLbl.text = "$3219.38"
     }
 
     override func didReceiveMemoryWarning() {

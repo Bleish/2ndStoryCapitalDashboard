@@ -12,15 +12,15 @@ class AdminViewController: UIViewController {
 
     @IBOutlet var realEstateView: UIView!
     @IBOutlet var edTechView: UIView!
-    @IBOutlet var realCapRateView: UIView!
-    @IBOutlet var realCashRetView: UIView!
-    @IBOutlet var edCACView: UIView!
-    @IBOutlet var edPPView: UIView!
-    @IBOutlet var edRRRView: UIView!
-    @IBOutlet var edRenewView: UIView!
-    @IBOutlet var edLCView: UIView!
-    @IBOutlet var edGCView: UIView!
-    @IBOutlet var edOpCashView: UIView!
+    @IBOutlet var realCapRateView: AdminKeyMetricView!
+    @IBOutlet var realCashRetView: AdminKeyMetricView!
+    @IBOutlet var edCACView: AdminKeyMetricView!
+    @IBOutlet var edPPView: AdminKeyMetricView!
+    @IBOutlet var edRRRView: AdminKeyMetricView!
+    @IBOutlet var edRenewView: AdminKeyMetricView!
+    @IBOutlet var edRetView: AdminKeyMetricView!
+    @IBOutlet var edCLVView: AdminKeyMetricView!
+    @IBOutlet var edOpCashView: AdminKeyMetricView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +30,7 @@ class AdminViewController: UIViewController {
         catViewArr += [realEstateView!, edTechView!]
         var metViewArr: [UIView] = []
         metViewArr += [realCapRateView!, realCashRetView!, edCACView!, edPPView!,
-            edRRRView!, edRenewView!, edLCView!, edGCView!, edOpCashView!]
+            edRRRView!, edRenewView!, edRetView!, edCLVView!, edOpCashView!]
         
         let cRadius: CGFloat = 20.0
         
@@ -41,6 +41,22 @@ class AdminViewController: UIViewController {
         for view in metViewArr {
             view.layer.borderWidth = 2;
         }
+        
+        realCapRateView.statLbl.text = "8.33%"
+        realCashRetView.statLbl.text = "$3219.38"
+        edCACView.statLbl.text = "$4159.38"
+        edCACView.statLbl.textColor = UIColor.redColor()
+        edPPView.statLbl.text = "$2932.92"
+        edRRRView.statLbl.text = "$6434.02"
+        edRRRView.statLbl.textColor = UIColor.yellowColor()
+        edRenewView.statLbl.text = "$6434.02"
+        edRetView.statLbl.text = "$6434.02"
+        edCLVView.statLbl.text = "$6434.02"
+        edCLVView.statLbl.textColor = UIColor.yellowColor()
+        edOpCashView.statLbl.text = "$6434.02"
+
+        
+        
         
 //        overview1.backgroundColor = UIColor.redColor()
 //        overview1.layer.cornerRadius = 20.0
