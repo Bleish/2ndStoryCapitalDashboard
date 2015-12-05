@@ -22,6 +22,7 @@ class AdminViewController: UIViewController {
     @IBOutlet var edCLVView: AdminKeyMetricView!
     @IBOutlet var edOpCashView: AdminKeyMetricView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,8 +43,22 @@ class AdminViewController: UIViewController {
             view.layer.borderWidth = 2;
         }
         
-        realCapRateView.statLbl.text = "8.33%"
-        realCashRetView.statLbl.text = "$3219.38"
+        // Calc Averages
+        let realCount = Double(AppData.realInvestments.count)
+        let edCount = Double(AppData.edInvestments.count)
+        
+        var sum = 0.0
+        for investment in AppData.realInvestments {
+            sum += investment.capRate;
+        }
+        realCapRateView.statLbl.text = String(format: "%.2f%%", sum / realCount)
+        
+        sum = 0.0
+        for investment in AppData.realInvestments {
+            sum += investment.cashReturn;
+        }
+        realCashRetView.statLbl.text = String(format: "$%.2f%", sum / realCount)
+        
         edCACView.statLbl.text = "$4159.38"
         edCACView.statLbl.textColor = UIColor.redColor()
         edPPView.statLbl.text = "$2932.92"
@@ -55,8 +70,6 @@ class AdminViewController: UIViewController {
         edCLVView.statLbl.textColor = UIColor.yellowColor()
         edOpCashView.statLbl.text = "$6434.02"
 
-        
-        
         
 //        overview1.backgroundColor = UIColor.redColor()
 //        overview1.layer.cornerRadius = 20.0

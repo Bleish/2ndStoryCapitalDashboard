@@ -8,48 +8,10 @@
 
 import UIKit
 
-class Investor {
-    var name: String
-    var metric: String
-    
-    init?(name: String, metric: String) {
-        self.name = name
-        self.metric = metric
-        if name.isEmpty || metric.isEmpty {
-            return nil
-        }
-    }
-}
-
 class InvestmentsViewController: UITableViewController {
-    
-    // MARK: Properties
-    var investors: [Investor] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        loadSampleInvestors()
-    }
-    
-    func loadSampleInvestors() {
-        let investor1 = Investor(name: "Investor A", metric: "Key Metrics")!
-        let investor2 = Investor(name: "Investor B", metric: "Key Metrics")!
-        let investor3 = Investor(name: "Investor C", metric: "Key Metrics")!
-        let investor4 = Investor(name: "Investor D", metric: "Key Metrics")!
-        let investor5 = Investor(name: "Investor E", metric: "Key Metrics")!
-        let investor6 = Investor(name: "Investor F", metric: "Key Metrics")!
-        let investor7 = Investor(name: "Investor G", metric: "Key Metrics")!
-        let investor8 = Investor(name: "Investor H", metric: "Key Metrics")!
-        let investor9 = Investor(name: "Investor I", metric: "Key Metrics")!
-        
-        investors += [investor1, investor2, investor3, investor4, investor5, investor6, investor7, investor8, investor9]
     }
 
     override func didReceiveMemoryWarning() {
@@ -66,20 +28,26 @@ class InvestmentsViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return investors.count
+        return AppData.realInvestments.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "InvestorTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! InvestorTableViewCell
-        let investor = investors[indexPath.row]
         
-        cell.investorLabel.text = investor.name
-        cell.metricLabel.text = investor.metric
-
-        // Configure the cell...
+        let investment = AppData.realInvestments[indexPath.row]
+        cell.investorLabel.text = investment.name
+        cell.capLabel.text = "\(investment.capRate)%"
+        cell.cashLabel.text = "$\(investment.cashReturn)"
+        cell.theInvestment = investment
 
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let investment = AppData.realInvestments[indexPath.row]
+        AppData.currentReal = investment
+        self.performSegueWithIdentifier("new", sender: nil)
     }
 
 

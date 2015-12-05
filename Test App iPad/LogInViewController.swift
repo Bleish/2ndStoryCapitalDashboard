@@ -12,12 +12,11 @@ class LogInViewController: UIViewController {
 
     @IBOutlet var userTextField: UITextField!
     @IBOutlet var passTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
-        //NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
-        //NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("textBeginEdit:"), name:UITextFieldTextDidBeginEditingNotification, object: nil);
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("textEndEdit:"), name:UITextFieldTextDidEndEditingNotification, object: nil);
     }
@@ -32,19 +31,15 @@ class LogInViewController: UIViewController {
     
     func textBeginEdit(sender: NSNotification) {
         UIView.animateWithDuration(0.3, animations: {
-            self.view.frame.origin.y -= 150
+            self.view.frame.origin.y -= 200
             }, completion: nil)
     }
     
     func textEndEdit(sender: NSNotification) {
         UIView.animateWithDuration(0.3, animations: {
-            self.view.frame.origin.y += 150
+            self.view.frame.origin.y += 200
             }, completion: nil)
     }
-    
-//    func textEndEdit(sender: NSNotification) {
-//        self.view.frame.origin.y += 150
-//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

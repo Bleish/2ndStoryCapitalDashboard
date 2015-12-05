@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AZT-x7-w2h">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Log-In View Controller-->
@@ -431,7 +430,7 @@
                                 <animations/>
                                 <color key="barTintColor" red="0.75686274509999996" green="0.1529411765" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
-                                    <navigationItem title="Sample Company View" id="NAD-UG-s9u">
+                                    <navigationItem title="Real Estate Company View" id="NAD-UG-s9u">
                                         <barButtonItem key="leftBarButtonItem" style="plain" id="JcC-6P-bsY">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="L55-cK-7vn">
                                                 <rect key="frame" x="20" y="7" width="178" height="30"/>
@@ -533,6 +532,7 @@
                     <connections>
                         <outlet property="capRateView" destination="iVY-kM-6fF" id="7Ds-BZ-xxs"/>
                         <outlet property="cashRetView" destination="UWv-rh-1VD" id="GII-dC-Hlx"/>
+                        <outlet property="navBar" destination="cIT-gI-VXl" id="4PV-2E-Qid"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="drD-9i-0OJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -556,46 +556,36 @@
                                     <rect key="frame" x="0.0" y="0.0" width="1024" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Investor Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8w0-el-IG0">
-                                            <rect key="frame" x="8" y="11" width="111" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Investor Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8w0-el-IG0">
+                                            <rect key="frame" x="8" y="11" width="335" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Key Metric" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dr9-K6-8Qm">
-                                            <rect key="frame" x="934" y="11" width="82" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Key Metric" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qsu-9U-FHi">
+                                            <rect key="frame" x="681" y="11" width="335" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" misplaced="YES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TXB-VW-aFw">
-                                            <rect key="frame" x="127" y="11" width="799" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Key Metric" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dr9-K6-8Qm">
+                                            <rect key="frame" x="345" y="11" width="335" height="21"/>
                                             <animations/>
-                                            <string key="text">...........................................................................................................................................................................................</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <animations/>
-                                    <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="TXB-VW-aFw" secondAttribute="bottom" constant="3" id="2Ez-1W-UrJ"/>
-                                        <constraint firstItem="TXB-VW-aFw" firstAttribute="top" secondItem="iZV-gH-TLv" secondAttribute="topMargin" constant="3" id="5TI-Q1-9Hl"/>
-                                        <constraint firstItem="dr9-K6-8Qm" firstAttribute="baseline" secondItem="8w0-el-IG0" secondAttribute="baseline" id="MCc-7G-5tQ"/>
-                                        <constraint firstItem="8w0-el-IG0" firstAttribute="leading" secondItem="iZV-gH-TLv" secondAttribute="leadingMargin" id="Slz-F5-rXV"/>
-                                        <constraint firstItem="TXB-VW-aFw" firstAttribute="leading" secondItem="8w0-el-IG0" secondAttribute="trailing" constant="8" id="Usq-HO-xU5"/>
-                                        <constraint firstItem="dr9-K6-8Qm" firstAttribute="centerY" secondItem="iZV-gH-TLv" secondAttribute="centerY" id="VWc-dN-ayB"/>
-                                        <constraint firstItem="dr9-K6-8Qm" firstAttribute="leading" secondItem="TXB-VW-aFw" secondAttribute="trailing" constant="8" id="dwh-s1-h1F"/>
-                                        <constraint firstItem="dr9-K6-8Qm" firstAttribute="trailing" secondItem="iZV-gH-TLv" secondAttribute="trailingMargin" id="iub-NS-mzV"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <animations/>
                                 <connections>
+                                    <outlet property="capLabel" destination="dr9-K6-8Qm" id="AKS-g7-Vlo"/>
+                                    <outlet property="cashLabel" destination="Qsu-9U-FHi" id="wh8-ZI-g0A"/>
                                     <outlet property="investorLabel" destination="8w0-el-IG0" id="Pd1-FW-oBf"/>
-                                    <outlet property="metricLabel" destination="dr9-K6-8Qm" id="UUj-vw-XGS"/>
-                                    <segue destination="woS-4h-coU" kind="presentation" modalTransitionStyle="crossDissolve" id="gTb-fF-mSJ"/>
+                                    <segue destination="woS-4h-coU" kind="presentation" identifier="new" trigger="accessoryAction" id="K6E-aF-2Pa"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -604,7 +594,7 @@
                             <outlet property="delegate" destination="xPG-5L-xUh" id="nDM-el-3Nt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Sample Investments View" id="Ug9-1X-fEs">
+                    <navigationItem key="navigationItem" title="Real Estate Investments" id="Ug9-1X-fEs">
                         <barButtonItem key="leftBarButtonItem" style="plain" id="Pqm-dE-OGH">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XOD-4p-hib">
                                 <rect key="frame" x="20" y="7" width="142" height="30"/>
@@ -695,7 +685,7 @@
         <!--Navigation Controller A-->
         <scene sceneID="HiG-kN-Mc7">
             <objects>
-                <navigationController title="Navigation Controller A" automaticallyAdjustsScrollViewInsets="NO" id="F8H-FD-4Ap" sceneMemberID="viewController">
+                <navigationController title="Navigation Controller A" wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" id="F8H-FD-4Ap" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="fh7-PX-DWP">
@@ -725,6 +715,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="Fer-ZO-SDE"/>
         <segue reference="sM3-Zg-18r"/>
-        <segue reference="tNh-Yb-57Q"/>
+        <segue reference="VmK-8y-dLA"/>
     </inferredMetricsTieBreakers>
 </document>
