@@ -13,6 +13,7 @@ class InvestmentsViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Set height for the section header
         self.tableView.sectionHeaderHeight = 44
     }
 
@@ -32,7 +33,8 @@ class InvestmentsViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return AppData.realInvestments.count
     }
-
+    
+    // Display all Real Estate investments and metrics (at a glance)
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cellIdentifier = "InvestmentTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! InvestmentTableViewCell
@@ -46,12 +48,14 @@ class InvestmentsViewController: UITableViewController {
         return cell
     }
     
+    // Segue to company view when an investment is selected
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         let investment = AppData.realInvestments[indexPath.row]
         AppData.currentReal = investment
         self.performSegueWithIdentifier("new", sender: nil)
     }
     
+    // Create section header
     override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerCell = tableView.dequeueReusableCellWithIdentifier("InvestmentTableViewCell") as! InvestmentTableViewCell
         headerCell.backgroundColor = UIColor.darkGrayColor()

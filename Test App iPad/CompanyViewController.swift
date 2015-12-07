@@ -9,15 +9,18 @@
 import UIKit
 
 class CompanyViewController: UIViewController {
+    
     @IBOutlet var capRateView: AdminKeyMetricView!
     @IBOutlet var cashRetView: AdminKeyMetricView!
     @IBOutlet var navBar: UINavigationBar!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view.
         self.navBar.topItem!.title = "\(AppData.currentReal.name)";
         
+        // Round the view corners
         let cRad: CGFloat = 92.0
         capRateView.layer.cornerRadius = cRad
         cashRetView.layer.cornerRadius = cRad
@@ -25,6 +28,7 @@ class CompanyViewController: UIViewController {
         cashRetView.layer.cornerRadius = cRad
         cashRetView.layer.cornerRadius = cRad
         
+        // Pull metrics from the current investment
         capRateView.statLbl.text = "\(AppData.currentReal.capRate)%"
         cashRetView.statLbl.text = "$\(AppData.currentReal.cashReturn)"
     }

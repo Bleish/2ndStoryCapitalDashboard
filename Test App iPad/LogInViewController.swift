@@ -21,20 +21,14 @@ class LogInViewController: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("textEndEdit:"), name:UITextFieldTextDidEndEditingNotification, object: nil);
     }
     
-//    func keyboardWillShow(sender: NSNotification) {
-//        self.view.frame.origin.y -= 150
-//    }
-//
-//    func keyboardWillHide(sender: NSNotification) {
-//        self.view.frame.origin.y += 150
-//    }
-    
+    // Move view up to make room for keyboard
     func textBeginEdit(sender: NSNotification) {
         UIView.animateWithDuration(0.3, animations: {
             self.view.frame.origin.y -= 200
             }, completion: nil)
     }
     
+    // Move view back down when keyboard is hidden
     func textEndEdit(sender: NSNotification) {
         UIView.animateWithDuration(0.3, animations: {
             self.view.frame.origin.y += 200

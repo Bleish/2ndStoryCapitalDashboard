@@ -553,7 +553,7 @@
                                 <rect key="frame" x="0.0" y="28" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hz4-VZ-Nav" id="iZV-gH-TLv">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Investment Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8w0-el-IG0">
@@ -631,57 +631,6 @@
             </objects>
             <point key="canvasLocation" x="-582" y="2010"/>
         </scene>
-        <!--Collection View Controller-->
-        <scene sceneID="a3V-Yt-gi2">
-            <objects>
-                <collectionViewController id="x3H-xv-9Qc" customClass="CollectionViewController" customModule="_nd_Story_Dashboard__Prototype_" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="x9w-S9-YuL">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Xtx-Oe-fCl">
-                            <size key="itemSize" width="200" height="50"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="theCell" id="MAk-t5-agS" customClass="InvestmentCollectionViewCell" customModule="_nd_Story_Dashboard__Prototype_" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="200" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Investment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9W8-Fm-Hyj">
-                                            <rect key="frame" x="58" y="14" width="85" height="21"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <animations/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                                <animations/>
-                                <connections>
-                                    <outlet property="myLabel" destination="9W8-Fm-Hyj" id="cHw-F1-52X"/>
-                                </connections>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="x3H-xv-9Qc" id="0HV-Tp-NlF"/>
-                            <outlet property="delegate" destination="x3H-xv-9Qc" id="QWE-Ip-YmP"/>
-                        </connections>
-                    </collectionView>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BBY-cM-YwT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-582" y="2915"/>
-        </scene>
         <!--Navigation Controller A-->
         <scene sceneID="HiG-kN-Mc7">
             <objects>
@@ -715,6 +664,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="NW9-A6-keg"/>
         <segue reference="VmK-8y-dLA"/>
-        <segue reference="EGC-cy-X9X"/>
+        <segue reference="do1-p5-to2"/>
     </inferredMetricsTieBreakers>
 </document>
