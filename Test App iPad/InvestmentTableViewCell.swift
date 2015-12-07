@@ -14,8 +14,6 @@ class InvestmentTableViewCell: UITableViewCell {
     @IBOutlet var investmentLabel: UILabel!
     @IBOutlet var capLabel: UILabel!
     @IBOutlet var cashLabel: UILabel!
-    
-    var theInvestment: RealEstate = AppData.currentReal
 
     override func awakeFromNib() {
         super.awakeFromNib()

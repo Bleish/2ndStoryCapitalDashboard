@@ -41,9 +41,11 @@ class InvestmentsViewController: UITableViewController {
         
         let investment = AppData.realInvestments[indexPath.row]
         cell.investmentLabel.text = investment.name
+        cell.investmentLabel.font = UIFont.boldSystemFontOfSize(17.0)
         cell.capLabel.text = "\(investment.capRate)%"
+        cell.capLabel.textColor = investment.capColor
         cell.cashLabel.text = "$\(investment.cashReturn)"
-        cell.theInvestment = investment
+        cell.cashLabel.textColor = investment.cashColor
 
         return cell
     }

@@ -8,6 +8,8 @@
 
 import Foundation
 
+import UIKit
+
 import SQLite
 
 struct AppData {
@@ -16,10 +18,62 @@ struct AppData {
     static var currentReal = RealEstate()
     static var currentEd = EdTech()
     
+    static func calcColor(metricClass: String, metricValue: Double) -> UIColor {
+        var low = 0.0
+        var high = 0.0
+        
+        switch (metricClass) {
+        case ("R1"):
+            low = 5
+            high = 10
+        case ("R2"):
+            low = 2000
+            high = 5000
+        case ("E1"):
+            low = 3000
+            high = 9000
+        case ("E2"):
+            low = 9000
+            high = 15000
+        case ("E3"):
+            low = 2000
+            high = 7000
+        case ("E4"):
+            low = 4000
+            high = 8000
+        case ("E5"):
+            low = 11000
+            high = 30000
+        case ("E6"):
+            low = 6000
+            high = 12000
+        case ("E7"):
+            low = 10000
+            high = 24000
+        default:
+            print("Invalid Class Type")
+        }
+        
+        let ave = (low + high) / 2.0
+        let lowAve = (low + ave) / 2.0
+        let highAve = (ave + high) / 2.0
+        
+        if (metricValue <= lowAve) {
+            return UIColor.redColor()
+        }
+        else if (metricValue < highAve) {
+            return UIColor(red: 1, green: 0.75, blue: 0, alpha: 1)
+        }
+        
+        return UIColor.greenColor()
+    }
+    
     static func pullData() {
         do {
             // LINK TO DATABASE
-            let db = try Connection("/Users/brandonleishman/Documents/Programming/Swift Projects/2nd Story Dashboard/Test App iPad/dummyData")
+            let mainBundle: NSBundle = NSBundle.mainBundle()
+            let myFile = mainBundle.pathForResource("dummyData", ofType: "db")
+            let db = try Connection(myFile!)
             
             // REAL ESTATE INVESTMENTS
             var companies = Table("RealEstate")
@@ -30,6 +84,9 @@ struct AppData {
             
             for company in db.prepare(companies) {
                 AppData.realInvestments.append(RealEstate(theName: company[realName], capRate: company[capRate], cashReturn: company[cashReturn]))
+            }
+            for investment in realInvestments {
+                investment.setColor()
             }
             if !AppData.realInvestments.isEmpty {
                 AppData.currentReal = AppData.realInvestments[0]
@@ -50,7 +107,9 @@ struct AppData {
             for company in db.prepare(companies) {
                 AppData.edInvestments.append(EdTech(theName: company[edName], acquisition: company[acquisition], payback: company[payback], annualRun: company[annualRun], renewal: company[renewal], retention: company[retention],  lifetimeVal: company[lifetimeVal], opCash: company[opCash]))
             }
-            
+            for investment in edInvestments {
+                investment.setColor()
+            }
             if !AppData.edInvestments.isEmpty {
                 AppData.currentEd = AppData.edInvestments[0]
             }
@@ -58,39 +117,5 @@ struct AppData {
         catch _ {
             print("Unable to open the database file")
         }
-
-//        // REAL ESTATE INVESTMENTS
-//        let realName = "Real Estate Company"
-//        let capRate = 8.33
-//        let cashReturn = 3219.83
-//        AppData.realInvestments.append(RealEstate(theName: realName, capRate: capRate, cashReturn: cashReturn))
-//        
-//        let realName2 = "Real Estate Company 2"
-//        let capRate2 = 6.43
-//        let cashReturn2 = 4001.61
-//        AppData.realInvestments.append(RealEstate(theName: realName2, capRate: capRate2, cashReturn: cashReturn2))
-//        
-//        let realName3 = "Real Estate Company 3"
-//        let capRate3 = 9.11
-//        let cashReturn3 = 2981.32
-//        AppData.realInvestments.append(RealEstate(theName: realName3, capRate: capRate3, cashReturn: cashReturn3))
-//        
-//        let realName4 = "Real Estate Company 4"
-//        let capRate4 = 5.89
-//        let cashReturn4 = 2011.90
-//        AppData.realInvestments.append(RealEstate(theName: realName4, capRate: capRate4, cashReturn: cashReturn4))
-        
-        
-//        // EDUCATION TECHNOLOGY INVESTMENTS
-//        let edName = "Education Technology Company"
-//        let acquisition = 2342.23
-//        let payback = 2341.36
-//        let annualRun = 79532.55
-//        let renewal = 9012.35
-//        let retention = 5652.45
-//        let lifetimeVal = 6212.12
-//        let opCash = 10000.12
-//        AppData.edInvestments.append(EdTech(theName: edName, acquisition: acquisition, payback: payback, annualRun: annualRun, renewal: renewal, retention: retention,  lifetimeVal: lifetimeVal, opCash: opCash))
-//        AppData.currentEd = AppData.edInvestments[0]
     }
 }

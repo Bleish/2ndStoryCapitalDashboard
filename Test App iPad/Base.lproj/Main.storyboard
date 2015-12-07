@@ -357,6 +357,10 @@
                                         </subviews>
                                         <animations/>
                                         <color key="backgroundColor" red="0.3294117647" green="0.3294117647" blue="0.3294117647" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="iHx-Q8-ALK" appends="YES" id="4cL-Cy-jNk"/>
+                                        </connections>
                                     </view>
                                 </subviews>
                                 <animations/>
@@ -366,7 +370,7 @@
                                 <animations/>
                                 <color key="barTintColor" red="0.75686274509999996" green="0.1529411765" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
-                                    <navigationItem title="Sample Admin View" id="9IW-Rm-aH8">
+                                    <navigationItem title="Overview" id="9IW-Rm-aH8">
                                         <barButtonItem key="rightBarButtonItem" style="plain" id="34s-9W-tFL">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3j6-kH-qyJ">
                                                 <rect key="frame" x="948" y="7" width="56" height="30"/>
@@ -410,8 +414,401 @@
                         <segue destination="F8H-FD-4Ap" kind="presentation" modalTransitionStyle="crossDissolve" id="NW9-A6-keg"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="iHx-Q8-ALK">
+                    <connections>
+                        <segue destination="pAT-Cv-lb3" kind="presentation" modalTransitionStyle="crossDissolve" id="UW2-LW-goW"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1733" y="1106"/>
+            <point key="canvasLocation" x="-582" y="1090"/>
+        </scene>
+        <!--ET Company View Controller-->
+        <scene sceneID="Dc5-9T-FhZ">
+            <objects>
+                <viewController title="ET Company View Controller" id="jOp-oZ-DO2" customClass="ETCompanyViewController" customModule="_nd_Story_Dashboard__Prototype_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JJW-mi-6Ed"/>
+                        <viewControllerLayoutGuide type="bottom" id="8lh-u6-Krv"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VbW-fv-RQJ">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kzl-q0-3b9">
+                                <rect key="frame" x="0.0" y="20" width="1024" height="44"/>
+                                <animations/>
+                                <color key="barTintColor" red="0.75686274509999996" green="0.1529411765" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Education Technology Company View" id="TTx-tB-vcc">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="tPg-fI-fZk">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ACh-PB-9rV">
+                                                <rect key="frame" x="20" y="7" width="178" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                <state key="normal" title="&lt; Return to Investments View">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="pAT-Cv-lb3" kind="presentation" modalTransitionStyle="crossDissolve" id="2Ou-Ba-aOk"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="MI2-61-lxz">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="s9a-6R-E3I">
+                                                <rect key="frame" x="948" y="7" width="56" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                <state key="normal" title="LOG OUT">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="AZT-x7-w2h" kind="presentation" modalTransitionStyle="flipHorizontal" id="bk0-K9-V67"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ptn-cp-2aS">
+                                <rect key="frame" x="12" y="92" width="1000" height="648"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4y8-0v-ZJL" customClass="AdminKeyMetricView" customModule="_nd_Story_Dashboard__Prototype_" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="20" width="225" height="294"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fe-US-fbV">
+                                                <rect key="frame" x="8" y="117" width="209" height="60"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Acquisition Cost" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="guB-p8-eQe">
+                                                <rect key="frame" x="8" y="20" width="209" height="50"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="metricLbl" destination="guB-p8-eQe" id="Jic-Ae-KvY"/>
+                                            <outlet property="statLbl" destination="6fe-US-fbV" id="Ca8-FB-07b"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iu2-p8-PUC" customClass="AdminKeyMetricView" customModule="_nd_Story_Dashboard__Prototype_" customModuleProvider="target">
+                                        <rect key="frame" x="143" y="334" width="225" height="294"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yxR-pg-6jF">
+                                                <rect key="frame" x="8" y="117" width="209" height="60"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Retention Rate" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gEZ-to-rp5">
+                                                <rect key="frame" x="8" y="20" width="209" height="50"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="metricLbl" destination="gEZ-to-rp5" id="xQv-ga-jst"/>
+                                            <outlet property="statLbl" destination="yxR-pg-6jF" id="5mm-Pr-Kev"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s7Q-YI-X5T" customClass="AdminKeyMetricView" customModule="_nd_Story_Dashboard__Prototype_" customModuleProvider="target">
+                                        <rect key="frame" x="388" y="334" width="225" height="294"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNK-7p-pM1">
+                                                <rect key="frame" x="8" y="117" width="209" height="60"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lifetime Value" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a0p-PM-Cxg">
+                                                <rect key="frame" x="8" y="20" width="209" height="50"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="metricLbl" destination="a0p-PM-Cxg" id="9Wp-l4-dr5"/>
+                                            <outlet property="statLbl" destination="oNK-7p-pM1" id="B4m-De-gfd"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L1h-Av-DtD" customClass="AdminKeyMetricView" customModule="_nd_Story_Dashboard__Prototype_" customModuleProvider="target">
+                                        <rect key="frame" x="265" y="20" width="225" height="294"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhX-II-KnV">
+                                                <rect key="frame" x="8" y="117" width="209" height="60"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Payback Period" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sKW-jc-iie">
+                                                <rect key="frame" x="8" y="20" width="209" height="50"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="metricLbl" destination="sKW-jc-iie" id="O7V-8d-aap"/>
+                                            <outlet property="statLbl" destination="fhX-II-KnV" id="mgO-hs-Dt5"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hK2-pB-cu8" customClass="AdminKeyMetricView" customModule="_nd_Story_Dashboard__Prototype_" customModuleProvider="target">
+                                        <rect key="frame" x="510" y="20" width="225" height="294"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ch-IV-J9G">
+                                                <rect key="frame" x="8" y="117" width="209" height="60"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Annual Run Rate" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcs-Ee-zyL">
+                                                <rect key="frame" x="8" y="20" width="209" height="50"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="metricLbl" destination="fcs-Ee-zyL" id="0u2-ly-03D"/>
+                                            <outlet property="statLbl" destination="0ch-IV-J9G" id="EzQ-KZ-X3C"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wql-3z-aIe" customClass="AdminKeyMetricView" customModule="_nd_Story_Dashboard__Prototype_" customModuleProvider="target">
+                                        <rect key="frame" x="755" y="20" width="225" height="294"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ac-RD-1OT">
+                                                <rect key="frame" x="8" y="117" width="209" height="60"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Renewal Rate" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYM-SV-UKw">
+                                                <rect key="frame" x="8" y="20" width="209" height="50"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="metricLbl" destination="oYM-SV-UKw" id="ywP-bw-vdb"/>
+                                            <outlet property="statLbl" destination="2ac-RD-1OT" id="Oxn-eO-yyq"/>
+                                        </connections>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="icX-iC-Wcg" customClass="AdminKeyMetricView" customModule="_nd_Story_Dashboard__Prototype_" customModuleProvider="target">
+                                        <rect key="frame" x="633" y="334" width="225" height="294"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Stat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTJ-Hx-ItW">
+                                                <rect key="frame" x="8" y="117" width="209" height="60"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Operating Cash" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c8M-m8-8Kx">
+                                                <rect key="frame" x="8" y="20" width="209" height="50"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="metricLbl" destination="c8M-m8-8Kx" id="01k-LP-QDI"/>
+                                            <outlet property="statLbl" destination="bTJ-Hx-ItW" id="kv0-rJ-cjn"/>
+                                        </connections>
+                                    </view>
+                                </subviews>
+                                <animations/>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.75686274509999996" green="0.1529411765" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="acqView" destination="4y8-0v-ZJL" id="1WW-cX-QQX"/>
+                        <outlet property="annRunView" destination="hK2-pB-cu8" id="fFY-8p-wRh"/>
+                        <outlet property="lifeValView" destination="s7Q-YI-X5T" id="eYa-EO-egg"/>
+                        <outlet property="navBar" destination="Kzl-q0-3b9" id="IXi-pn-RtL"/>
+                        <outlet property="opCashView" destination="icX-iC-Wcg" id="lcS-oI-igJ"/>
+                        <outlet property="payView" destination="L1h-Av-DtD" id="wtr-PV-C7r"/>
+                        <outlet property="renewView" destination="wql-3z-aIe" id="N66-px-8ix"/>
+                        <outlet property="retView" destination="iu2-p8-PUC" id="Yfy-hm-bzq"/>
+                    </connections>
+                </viewController>
+                <navigationItem id="XIz-hx-sup">
+                    <barButtonItem key="leftBarButtonItem" title="&lt; Return to Investments View" id="Y5R-Fr-5ll">
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </barButtonItem>
+                </navigationItem>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e6L-Ol-8Ow" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1742" y="190"/>
+        </scene>
+        <!--ET Investments View Controller-->
+        <scene sceneID="wEv-hL-w5B">
+            <objects>
+                <tableViewController title="ET Investments View Controller" id="LGB-6v-duE" customClass="ETInvestmentsViewController" customModule="_nd_Story_Dashboard__Prototype_" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="1zE-fG-deY">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ETInvestmentTableViewCell" id="Q0q-5D-sBt" customClass="ETInvestmentTableViewCell" customModule="_nd_Story_Dashboard__Prototype_" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="1024" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q0q-5D-sBt" id="jI1-Re-9QB">
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Investment Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cIm-SH-alY">
+                                            <rect key="frame" x="8" y="11" width="174" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Key Metric" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3X-0G-Jzf">
+                                            <rect key="frame" x="190" y="11" width="111" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Key Metric" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="egF-Fh-Y3y">
+                                            <rect key="frame" x="309" y="11" width="111" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Key Metric" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rNg-lz-mfQ">
+                                            <rect key="frame" x="428" y="11" width="111" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Key Metric" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDU-uY-aCZ">
+                                            <rect key="frame" x="547" y="11" width="111" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Key Metric" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQB-gb-HaW">
+                                            <rect key="frame" x="666" y="11" width="111" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Key Metric" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pFT-Yv-m3y">
+                                            <rect key="frame" x="785" y="11" width="111" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Key Metric" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnf-aq-hT9">
+                                            <rect key="frame" x="904" y="11" width="111" height="21"/>
+                                            <animations/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <animations/>
+                                </tableViewCellContentView>
+                                <animations/>
+                                <connections>
+                                    <outlet property="acqLabel" destination="x3X-0G-Jzf" id="5EV-JH-SMq"/>
+                                    <outlet property="annRunLabel" destination="rNg-lz-mfQ" id="sbb-Cb-yv5"/>
+                                    <outlet property="investmentLabel" destination="cIm-SH-alY" id="Rs3-8K-Ajl"/>
+                                    <outlet property="lifeValLabel" destination="pFT-Yv-m3y" id="4ZT-41-pbP"/>
+                                    <outlet property="opCashLabel" destination="Fnf-aq-hT9" id="BiZ-be-kDH"/>
+                                    <outlet property="payLabel" destination="egF-Fh-Y3y" id="iFw-up-uTk"/>
+                                    <outlet property="renewLabel" destination="sDU-uY-aCZ" id="7ew-kL-3wa"/>
+                                    <outlet property="retLabel" destination="RQB-gb-HaW" id="qHv-Xs-UYQ"/>
+                                    <segue destination="jOp-oZ-DO2" kind="presentation" identifier="new2" trigger="accessoryAction" id="bg9-qF-TKO"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="LGB-6v-duE" id="QmW-cA-s3W"/>
+                            <outlet property="delegate" destination="LGB-6v-duE" id="DsA-Uj-rBk"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Education Technology Investments" id="e4D-Mi-zpZ">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="VyA-vZ-zlj">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kLU-66-stn">
+                                <rect key="frame" x="20" y="7" width="142" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <state key="normal" title="&lt; Return to Admin View">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="UaQ-L7-uIq" kind="presentation" modalTransitionStyle="crossDissolve" id="e9s-s9-meA"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="gYj-vs-Szd">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wtK-rb-SM2">
+                                <rect key="frame" x="948" y="7" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                <state key="normal" title="LOG OUT">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="AZT-x7-w2h" kind="presentation" modalTransitionStyle="flipHorizontal" id="7wF-vL-yFG"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bzV-wS-PhP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1742" y="1090"/>
         </scene>
         <!--Company View Controller-->
         <scene sceneID="cqg-xV-Qah">
@@ -537,14 +934,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="drD-9i-0OJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="578" y="1106"/>
+            <point key="canvasLocation" x="578" y="190"/>
         </scene>
         <!--Investments View Controller-->
         <scene sceneID="uqA-XJ-06r">
             <objects>
                 <tableViewController title="Investments View Controller" id="xPG-5L-xUh" customClass="InvestmentsViewController" customModule="_nd_Story_Dashboard__Prototype_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5o8-oH-ihz">
-                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -553,7 +950,7 @@
                                 <rect key="frame" x="0.0" y="28" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hz4-VZ-Nav" id="iZV-gH-TLv">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Investment Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8w0-el-IG0">
@@ -629,7 +1026,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yCE-jN-4p6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-582" y="2010"/>
+            <point key="canvasLocation" x="578" y="1090"/>
         </scene>
         <!--Navigation Controller A-->
         <scene sceneID="HiG-kN-Mc7">
@@ -655,15 +1052,37 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cdt-XK-3fL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-582" y="1106"/>
+            <point key="canvasLocation" x="578" y="1918"/>
+        </scene>
+        <!--Navigation Controller B-->
+        <scene sceneID="OwO-en-v5b">
+            <objects>
+                <navigationController title="Navigation Controller B" wantsFullScreenLayout="YES" automaticallyAdjustsScrollViewInsets="NO" id="pAT-Cv-lb3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="4s3-v8-Q4L">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="barTintColor" red="0.75686274509999996" green="0.1529411765" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LGB-6v-duE" kind="relationship" relationship="rootViewController" id="Rxp-Id-Uca"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7VN-8Q-Efm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1742" y="1918"/>
         </scene>
     </scenes>
     <resources>
         <image name="2nd Story Capital Logo" width="794" height="149"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="UW2-LW-goW"/>
+        <segue reference="tNh-Yb-57Q"/>
+        <segue reference="EGC-cy-X9X"/>
         <segue reference="NW9-A6-keg"/>
-        <segue reference="VmK-8y-dLA"/>
-        <segue reference="do1-p5-to2"/>
     </inferredMetricsTieBreakers>
 </document>

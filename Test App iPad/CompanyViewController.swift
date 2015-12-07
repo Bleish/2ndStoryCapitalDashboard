@@ -30,7 +30,9 @@ class CompanyViewController: UIViewController {
         
         // Pull metrics from the current investment
         capRateView.statLbl.text = "\(AppData.currentReal.capRate)%"
+        capRateView.statLbl.textColor = AppData.currentReal.capColor
         cashRetView.statLbl.text = "$\(AppData.currentReal.cashReturn)"
+        cashRetView.statLbl.textColor = AppData.currentReal.cashColor
     }
 
     override func didReceiveMemoryWarning() {

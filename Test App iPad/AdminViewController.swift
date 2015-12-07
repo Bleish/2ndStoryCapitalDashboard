@@ -43,32 +43,85 @@ class AdminViewController: UIViewController {
             view.layer.borderWidth = 2;
         }
         
-        // Calc Averages
+        // CALC AVERAGES
         let realCount = Double(AppData.realInvestments.count)
         let edCount = Double(AppData.edInvestments.count)
+        var sum: Double
+        var ave: Double
         
-        var sum = 0.0
+        sum = 0.0
+        // Real Estate
         for investment in AppData.realInvestments {
-            sum += investment.capRate;
+            sum += investment.capRate
         }
-        realCapRateView.statLbl.text = String(format: "%.2f%%", sum / realCount)
+        ave = sum / realCount
+        realCapRateView.statLbl.text = String(format: "%.2f%%", ave)
+        realCapRateView.statLbl.textColor = AppData.calcColor("R1", metricValue: ave)
         
         sum = 0.0
         for investment in AppData.realInvestments {
-            sum += investment.cashReturn;
+            sum += investment.cashReturn
         }
-        realCashRetView.statLbl.text = String(format: "$%.2f%", sum / realCount)
+        ave = sum / realCount
+        realCashRetView.statLbl.text = String(format: "$%.2f%", ave)
+        realCashRetView.statLbl.textColor = AppData.calcColor("R2", metricValue: ave)
         
-        edCACView.statLbl.text = "$4159.38"
-        edCACView.statLbl.textColor = UIColor.redColor()
-        edPPView.statLbl.text = "$2932.92"
-        edRRRView.statLbl.text = "$6434.02"
-        edRRRView.statLbl.textColor = UIColor.yellowColor()
-        edRenewView.statLbl.text = "$6434.02"
-        edRetView.statLbl.text = "$6434.02"
-        edCLVView.statLbl.text = "$6434.02"
-        edCLVView.statLbl.textColor = UIColor.yellowColor()
-        edOpCashView.statLbl.text = "$6434.02"
+        // Education Technology
+        sum = 0.0
+        for investment in AppData.edInvestments {
+            sum += investment.acquisition
+        }
+        ave = sum / edCount
+        edCACView.statLbl.text = String(format: "$%.2f", ave)
+        edCACView.statLbl.textColor = AppData.calcColor("E1", metricValue: ave)
+        
+        sum = 0.0
+        for investment in AppData.edInvestments {
+            sum += investment.payback
+        }
+        ave = sum / edCount
+        edPPView.statLbl.text = String(format: "$%.2f", ave)
+        edPPView.statLbl.textColor = AppData.calcColor("E2", metricValue: ave)
+        
+        sum = 0.0
+        for investment in AppData.edInvestments {
+            sum += investment.annualRun
+        }
+        ave = sum / edCount
+        edRRRView.statLbl.text = String(format: "$%.2f", ave)
+        edRRRView.statLbl.textColor = AppData.calcColor("E3", metricValue: ave)
+        
+        sum = 0.0
+        for investment in AppData.edInvestments {
+            sum += investment.renewal
+        }
+        ave = sum / edCount
+        edRenewView.statLbl.text = String(format: "$%.2f", ave)
+        edRenewView.statLbl.textColor = AppData.calcColor("E4", metricValue: ave)
+        
+        sum = 0.0
+        for investment in AppData.edInvestments {
+            sum += investment.retention
+        }
+        ave = sum / edCount
+        edRetView.statLbl.text = String(format: "$%.2f", ave)
+        edRetView.statLbl.textColor = AppData.calcColor("E5", metricValue: ave)
+        
+        sum = 0.0
+        for investment in AppData.edInvestments {
+            sum += investment.lifetimeVal
+        }
+        ave = sum / edCount
+        edCLVView.statLbl.text = String(format: "$%.2f", ave)
+        edCLVView.statLbl.textColor = AppData.calcColor("E6", metricValue: ave)
+        
+        sum = 0.0
+        for investment in AppData.edInvestments {
+            sum += investment.opCash
+        }
+        ave = sum / edCount
+        edOpCashView.statLbl.text = String(format: "$%.2f", ave)
+        edOpCashView.statLbl.textColor = AppData.calcColor("E7", metricValue: ave)
     }
 
     override func didReceiveMemoryWarning() {

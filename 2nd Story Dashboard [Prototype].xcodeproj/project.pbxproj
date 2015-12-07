@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DF5004821C1553B5004D1E52 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF648F2C1C155378006367AC /* SQLite.framework */; };
 		DF5175E71C0CEA8F0058F93C /* Investment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5175E61C0CEA8F0058F93C /* Investment.swift */; };
 		DF5175E91C0CF5D80058F93C /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5175E81C0CF5D80058F93C /* AppData.swift */; };
 		DF68F33A1C042CB400B91DE9 /* AdminKeyMetricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF68F3391C042CB400B91DE9 /* AdminKeyMetricView.swift */; };
+		DFA23F871C1568A1002EF0D2 /* ETInvestmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA23F861C1568A1002EF0D2 /* ETInvestmentsViewController.swift */; };
+		DFA23F911C1568C2002EF0D2 /* ETInvestmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA23F901C1568C2002EF0D2 /* ETInvestmentTableViewCell.swift */; };
+		DFA23F931C15768B002EF0D2 /* ETCompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA23F921C15768B002EF0D2 /* ETCompanyViewController.swift */; };
 		DFAFD2871BD5FFAE00ED164F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFAFD2861BD5FFAE00ED164F /* Images.xcassets */; };
 		DFAFD28B1BD60EE700ED164F /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFD28A1BD60EE700ED164F /* AdminViewController.swift */; };
 		DFBC87571BD5EAC00028E0EF /* Images in Resources */ = {isa = PBXBuildFile; fileRef = DFBC87561BD5EAC00028E0EF /* Images */; };
+		DFE2C4111C158CA300D540D5 /* SQLite.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DF648F2C1C155378006367AC /* SQLite.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DFE2C4181C15964800D540D5 /* dummyData.db in Resources */ = {isa = PBXBuildFile; fileRef = DFE2C4171C15964800D540D5 /* dummyData.db */; };
 		DFE63FF71BD61FA3003F3608 /* InvestmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE63FF61BD61FA3003F3608 /* InvestmentTableViewCell.swift */; };
 		DFE63FF91BD6231E003F3608 /* InvestmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE63FF81BD6231E003F3608 /* InvestmentsViewController.swift */; };
 		DFEA95361BD4BE120084B398 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEA95351BD4BE120084B398 /* AppDelegate.swift */; };
@@ -83,6 +87,13 @@
 			remoteGlobalIDString = DCE7BBB91B7438620040D364;
 			remoteInfo = "SQLiteCipher Mac Tests";
 		};
+		DFE2C4121C158CA300D540D5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DF648F1F1C155378006367AC /* SQLite.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DC2B29E11B26F718001C60EA;
+			remoteInfo = "SQLite iOS";
+		};
 		DFEA95471BD4BE120084B398 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DFEA952A1BD4BE120084B398 /* Project object */;
@@ -99,14 +110,32 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DFE2C4141C158CA300D540D5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				DFE2C4111C158CA300D540D5 /* SQLite.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		DF5175E61C0CEA8F0058F93C /* Investment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Investment.swift; sourceTree = "<group>"; };
 		DF5175E81C0CF5D80058F93C /* AppData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		DF648F1F1C155378006367AC /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../Swift Libraries & Frameworks/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
 		DF68F3391C042CB400B91DE9 /* AdminKeyMetricView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminKeyMetricView.swift; sourceTree = "<group>"; };
+		DFA23F861C1568A1002EF0D2 /* ETInvestmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETInvestmentsViewController.swift; sourceTree = "<group>"; };
+		DFA23F901C1568C2002EF0D2 /* ETInvestmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETInvestmentTableViewCell.swift; sourceTree = "<group>"; };
+		DFA23F921C15768B002EF0D2 /* ETCompanyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCompanyViewController.swift; sourceTree = "<group>"; };
 		DFAFD2861BD5FFAE00ED164F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DFAFD28A1BD60EE700ED164F /* AdminViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		DFBC87561BD5EAC00028E0EF /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
+		DFE2C4171C15964800D540D5 /* dummyData.db */ = {isa = PBXFileReference; lastKnownFileType = file; name = dummyData.db; path = "Test App iPad/dummyData.db"; sourceTree = "<group>"; };
 		DFE63FF61BD61FA3003F3608 /* InvestmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvestmentTableViewCell.swift; sourceTree = "<group>"; };
 		DFE63FF81BD6231E003F3608 /* InvestmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvestmentsViewController.swift; sourceTree = "<group>"; };
 		DFEA95321BD4BE120084B398 /* 2nd Story Dashboard [Prototype].app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "2nd Story Dashboard [Prototype].app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -130,7 +159,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF5004821C1553B5004D1E52 /* SQLite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +197,7 @@
 		DFEA95291BD4BE120084B398 = {
 			isa = PBXGroup;
 			children = (
+				DFE2C4171C15964800D540D5 /* dummyData.db */,
 				DFAFD2861BD5FFAE00ED164F /* Images.xcassets */,
 				DFEA95341BD4BE120084B398 /* 2nd Story Dashboard [Prototype] */,
 				DFEA95491BD4BE120084B398 /* Test App iPadTests */,
@@ -195,6 +224,9 @@
 				DFEA95351BD4BE120084B398 /* AppDelegate.swift */,
 				DFEA95371BD4BE120084B398 /* LogInViewController.swift */,
 				DFEA95391BD4BE120084B398 /* Main.storyboard */,
+				DFA23F921C15768B002EF0D2 /* ETCompanyViewController.swift */,
+				DFA23F861C1568A1002EF0D2 /* ETInvestmentsViewController.swift */,
+				DFA23F901C1568C2002EF0D2 /* ETInvestmentTableViewCell.swift */,
 				DFEF3B731BD71D4A002467B3 /* CompanyViewController.swift */,
 				DFE63FF81BD6231E003F3608 /* InvestmentsViewController.swift */,
 				DFE63FF61BD61FA3003F3608 /* InvestmentTableViewCell.swift */,
@@ -238,10 +270,12 @@
 				DFEA952E1BD4BE120084B398 /* Sources */,
 				DFEA952F1BD4BE120084B398 /* Frameworks */,
 				DFEA95301BD4BE120084B398 /* Resources */,
+				DFE2C4141C158CA300D540D5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DFE2C4131C158CA300D540D5 /* PBXTargetDependency */,
 			);
 			name = "2nd Story Dashboard [Prototype]";
 			productName = "Test App iPad";
@@ -399,6 +433,7 @@
 			files = (
 				DFBC87571BD5EAC00028E0EF /* Images in Resources */,
 				DFAFD2871BD5FFAE00ED164F /* Images.xcassets in Resources */,
+				DFE2C4181C15964800D540D5 /* dummyData.db in Resources */,
 				DFEA95401BD4BE120084B398 /* LaunchScreen.storyboard in Resources */,
 				DFEA953D1BD4BE120084B398 /* Assets.xcassets in Resources */,
 				DFEA953B1BD4BE120084B398 /* Main.storyboard in Resources */,
@@ -429,7 +464,10 @@
 				DF5175E71C0CEA8F0058F93C /* Investment.swift in Sources */,
 				DFAFD28B1BD60EE700ED164F /* AdminViewController.swift in Sources */,
 				DFEA95381BD4BE120084B398 /* LogInViewController.swift in Sources */,
+				DFA23F931C15768B002EF0D2 /* ETCompanyViewController.swift in Sources */,
 				DF5175E91C0CF5D80058F93C /* AppData.swift in Sources */,
+				DFA23F871C1568A1002EF0D2 /* ETInvestmentsViewController.swift in Sources */,
+				DFA23F911C1568C2002EF0D2 /* ETInvestmentTableViewCell.swift in Sources */,
 				DFE63FF91BD6231E003F3608 /* InvestmentsViewController.swift in Sources */,
 				DFEA95361BD4BE120084B398 /* AppDelegate.swift in Sources */,
 				DFEF3B741BD71D4A002467B3 /* CompanyViewController.swift in Sources */,
@@ -457,6 +495,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		DFE2C4131C158CA300D540D5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SQLite iOS";
+			targetProxy = DFE2C4121C158CA300D540D5 /* PBXContainerItemProxy */;
+		};
 		DFEA95481BD4BE120084B398 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DFEA95311BD4BE120084B398 /* 2nd Story Dashboard [Prototype] */;
@@ -578,6 +621,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Test App iPad/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bleish.Test-App-iPad";
@@ -592,6 +636,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "Test App iPad/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.bleish.Test-App-iPad";
