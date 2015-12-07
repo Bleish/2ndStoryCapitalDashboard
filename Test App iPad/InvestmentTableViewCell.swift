@@ -1,5 +1,5 @@
 //
-//  InvestorTableViewCell.swift
+//  InvestmentTableViewCell.swift
 //  Test App iPad
 //
 //  Created by Brandon Leishman on 10/20/15.
@@ -8,10 +8,10 @@
 
 import UIKit
 
-class InvestorTableViewCell: UITableViewCell {
+class InvestmentTableViewCell: UITableViewCell {
     
     // MARK: Properties
-    @IBOutlet var investorLabel: UILabel!
+    @IBOutlet var investmentLabel: UILabel!
     @IBOutlet var capLabel: UILabel!
     @IBOutlet var cashLabel: UILabel!
     

@@ -12,6 +12,8 @@ class InvestmentsViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.tableView.sectionHeaderHeight = 44
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,11 +34,11 @@ class InvestmentsViewController: UITableViewController {
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cellIdentifier = "InvestorTableViewCell"
-        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! InvestorTableViewCell
+        let cellIdentifier = "InvestmentTableViewCell"
+        let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! InvestmentTableViewCell
         
         let investment = AppData.realInvestments[indexPath.row]
-        cell.investorLabel.text = investment.name
+        cell.investmentLabel.text = investment.name
         cell.capLabel.text = "\(investment.capRate)%"
         cell.cashLabel.text = "$\(investment.cashReturn)"
         cell.theInvestment = investment
@@ -49,7 +51,23 @@ class InvestmentsViewController: UITableViewController {
         AppData.currentReal = investment
         self.performSegueWithIdentifier("new", sender: nil)
     }
-
+    
+    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerCell = tableView.dequeueReusableCellWithIdentifier("InvestmentTableViewCell") as! InvestmentTableViewCell
+        headerCell.backgroundColor = UIColor.darkGrayColor()
+        
+        headerCell.investmentLabel.text = "Investment"
+        headerCell.investmentLabel.textColor = UIColor.whiteColor()
+        headerCell.investmentLabel.font = UIFont.boldSystemFontOfSize(17.0)
+        headerCell.capLabel.text = "Cap Rate"
+        headerCell.capLabel.textColor = UIColor.whiteColor()
+        headerCell.capLabel.font = UIFont.boldSystemFontOfSize(17.0)
+        headerCell.cashLabel.text = "Cash Return"
+        headerCell.cashLabel.textColor = UIColor.whiteColor()
+        headerCell.cashLabel.font = UIFont.boldSystemFontOfSize(17.0)
+        
+        return headerCell
+    }
 
     /*
     // Override to support conditional editing of the table view.

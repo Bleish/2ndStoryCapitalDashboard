@@ -69,19 +69,7 @@ class AdminViewController: UIViewController {
         edCLVView.statLbl.text = "$6434.02"
         edCLVView.statLbl.textColor = UIColor.yellowColor()
         edOpCashView.statLbl.text = "$6434.02"
-
-        
-//        overview1.backgroundColor = UIColor.redColor()
-//        overview1.layer.cornerRadius = 20.0
-//        overview1.clipsToBounds = true
-//        overview1.layer.borderWidth = 5.0
-//        overview1.layer.borderColor = UIColor.whiteColor().CGColor
     }
-    
-//    @IBAction func handleTap(sender:UITapGestureRecognizer) {
-//        if sender.state == .Ended {
-//            // handling code
-//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

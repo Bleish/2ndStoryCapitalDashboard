@@ -544,19 +544,19 @@
             <objects>
                 <tableViewController title="Investments View Controller" id="xPG-5L-xUh" customClass="InvestmentsViewController" customModule="_nd_Story_Dashboard__Prototype_" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5o8-oH-ihz">
-                        <rect key="frame" x="0.0" y="64" width="1024" height="704"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InvestorTableViewCell" id="Hz4-VZ-Nav" customClass="InvestorTableViewCell" customModule="_nd_Story_Dashboard__Prototype_" customModuleProvider="target">
+                            <tableViewCell opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InvestmentTableViewCell" id="Hz4-VZ-Nav" customClass="InvestmentTableViewCell" customModule="_nd_Story_Dashboard__Prototype_" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="1024" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Hz4-VZ-Nav" id="iZV-gH-TLv">
                                     <rect key="frame" x="0.0" y="0.0" width="1024" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Investor Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8w0-el-IG0">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Investment Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8w0-el-IG0">
                                             <rect key="frame" x="8" y="11" width="335" height="21"/>
                                             <animations/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -584,7 +584,7 @@
                                 <connections>
                                     <outlet property="capLabel" destination="dr9-K6-8Qm" id="AKS-g7-Vlo"/>
                                     <outlet property="cashLabel" destination="Qsu-9U-FHi" id="wh8-ZI-g0A"/>
-                                    <outlet property="investorLabel" destination="8w0-el-IG0" id="Pd1-FW-oBf"/>
+                                    <outlet property="investmentLabel" destination="8w0-el-IG0" id="ks9-ng-Nai"/>
                                     <segue destination="woS-4h-coU" kind="presentation" identifier="new" trigger="accessoryAction" id="K6E-aF-2Pa"/>
                                 </connections>
                             </tableViewCell>
@@ -713,8 +713,8 @@
         <image name="2nd Story Capital Logo" width="794" height="149"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Fer-ZO-SDE"/>
-        <segue reference="sM3-Zg-18r"/>
+        <segue reference="NW9-A6-keg"/>
         <segue reference="VmK-8y-dLA"/>
+        <segue reference="EGC-cy-X9X"/>
     </inferredMetricsTieBreakers>
 </document>

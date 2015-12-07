@@ -15,7 +15,7 @@
 		DFAFD2871BD5FFAE00ED164F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFAFD2861BD5FFAE00ED164F /* Images.xcassets */; };
 		DFAFD28B1BD60EE700ED164F /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFD28A1BD60EE700ED164F /* AdminViewController.swift */; };
 		DFBC87571BD5EAC00028E0EF /* Images in Resources */ = {isa = PBXBuildFile; fileRef = DFBC87561BD5EAC00028E0EF /* Images */; };
-		DFE63FF71BD61FA3003F3608 /* InvestorTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE63FF61BD61FA3003F3608 /* InvestorTableViewCell.swift */; };
+		DFE63FF71BD61FA3003F3608 /* InvestmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE63FF61BD61FA3003F3608 /* InvestmentTableViewCell.swift */; };
 		DFE63FF91BD6231E003F3608 /* InvestmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE63FF81BD6231E003F3608 /* InvestmentsViewController.swift */; };
 		DFEA95361BD4BE120084B398 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEA95351BD4BE120084B398 /* AppDelegate.swift */; };
 		DFEA95381BD4BE120084B398 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFEA95371BD4BE120084B398 /* LogInViewController.swift */; };
@@ -53,7 +53,7 @@
 		DFAFD2861BD5FFAE00ED164F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DFAFD28A1BD60EE700ED164F /* AdminViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		DFBC87561BD5EAC00028E0EF /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
-		DFE63FF61BD61FA3003F3608 /* InvestorTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvestorTableViewCell.swift; sourceTree = "<group>"; };
+		DFE63FF61BD61FA3003F3608 /* InvestmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvestmentTableViewCell.swift; sourceTree = "<group>"; };
 		DFE63FF81BD6231E003F3608 /* InvestmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvestmentsViewController.swift; sourceTree = "<group>"; };
 		DFEA95321BD4BE120084B398 /* 2nd Story Dashboard [Prototype].app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "2nd Story Dashboard [Prototype].app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFEA95351BD4BE120084B398 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 				DFEF3B731BD71D4A002467B3 /* CompanyViewController.swift */,
 				DFE63FF81BD6231E003F3608 /* InvestmentsViewController.swift */,
 				DF24D67F1BF16F3700436DC2 /* InvestmentCollectionViewCell.swift */,
-				DFE63FF61BD61FA3003F3608 /* InvestorTableViewCell.swift */,
+				DFE63FF61BD61FA3003F3608 /* InvestmentTableViewCell.swift */,
 				DF68F3391C042CB400B91DE9 /* AdminKeyMetricView.swift */,
 				DFAFD28A1BD60EE700ED164F /* AdminViewController.swift */,
 				DF5175E61C0CEA8F0058F93C /* Investment.swift */,
@@ -302,7 +302,7 @@
 				DFEA95361BD4BE120084B398 /* AppDelegate.swift in Sources */,
 				DFEF3B741BD71D4A002467B3 /* CompanyViewController.swift in Sources */,
 				DF68F33A1C042CB400B91DE9 /* AdminKeyMetricView.swift in Sources */,
-				DFE63FF71BD61FA3003F3608 /* InvestorTableViewCell.swift in Sources */,
+				DFE63FF71BD61FA3003F3608 /* InvestmentTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
