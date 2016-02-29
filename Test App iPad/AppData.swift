@@ -18,16 +18,28 @@ struct AppData {
     static var currentReal = RealEstate()
     static var currentEd = EdTech()
     
+    static let errorCodes = [
+        "CORRUPT EXCEL FILE",
+        "MISSING EXCEL FILE",
+        "UNABLE TO CONNECT TO SERVER",
+        "CORRUPT SERVER DATABASE",
+        "MISSING SERVER DATABASE",
+        "INVALID ERROR CODE"]
+    
+    static var currentError = -1
+    static var username = ""
+    static var password = ""
+    
     static func calcColor(metricClass: String, metricValue: Double) -> UIColor {
         var low = 0.0
         var high = 0.0
         
         switch (metricClass) {
         case ("R1"):
-            low = 5
+            low = 4
             high = 10
         case ("R2"):
-            low = 2000
+            low = 1500
             high = 5000
         case ("E1"):
             low = 3000
@@ -70,10 +82,29 @@ struct AppData {
     
     static func pullData() {
         do {
-            // LINK TO DATABASE
+            // PUT REMOTE LINK HERE
+            
+            
+            // LINK TO LOCAL DATABASE
             let mainBundle: NSBundle = NSBundle.mainBundle()
             let myFile = mainBundle.pathForResource("dummyData", ofType: "db")
             let db = try Connection(myFile!)
+            
+            // APP INFO / ERROR CODE / USERNAME & PASSWORD
+            let information = Table("AppInfo")
+            
+            let error = Expression<Int>("errorCode")
+            let user = Expression<String>("username")
+            let pass = Expression<String>("password")
+            
+            if let info = try db.pluck(information) {
+                currentError = info[error]
+                if (currentError < -1 || currentError > 5) {
+                    currentError = 5;
+                }
+                username = info[user]
+                password = info[pass]
+            }
             
             // REAL ESTATE INVESTMENTS
             var companies = Table("RealEstate")

@@ -12,11 +12,16 @@ class LogInViewController: UIViewController {
 
     @IBOutlet var userTextField: UITextField!
     @IBOutlet var passTextField: UITextField!
+    @IBOutlet var errorDisplay: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
+        if (AppData.currentError != -1) {
+            errorDisplay.text = AppData.errorCodes[AppData.currentError];
+        }
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("textBeginEdit:"), name:UITextFieldTextDidBeginEditingNotification, object: nil);
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("textEndEdit:"), name:UITextFieldTextDidEndEditingNotification, object: nil);
     }
@@ -34,6 +39,19 @@ class LogInViewController: UIViewController {
             self.view.frame.origin.y += 200
             }, completion: nil)
     }
+    
+    // Check username/password
+    @IBAction func signIn(sender: AnyObject) {
+        let userTrim = userTextField.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        let passTrim = passTextField.text!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceCharacterSet())
+        if (userTrim == AppData.username && passTrim == AppData.password) {
+            performSegueWithIdentifier("signIn", sender: nil)
+        }
+        else {
+            errorDisplay.text = "Invalid Username or Password"
+        }
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
