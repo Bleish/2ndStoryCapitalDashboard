@@ -24,7 +24,7 @@ class ETCompanyViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
-        self.navBar.topItem!.title = "\(AppData.currentEd.name)";
+//        self.navBar.topItem!.title = "\(AppData.currentEd.name)";
         
         // Round the view corners
         let cRad: CGFloat = 42.0
@@ -34,20 +34,20 @@ class ETCompanyViewController: UIViewController {
         }
         
         // Pull metrics from the current investment
-        acqView.statLbl.text = "$\(AppData.currentEd.acquisition)"
-        acqView.statLbl.textColor = AppData.currentEd.acqColor
-        payView.statLbl.text = "$\(AppData.currentEd.payback)"
-        payView.statLbl.textColor = AppData.currentEd.payColor
-        annRunView.statLbl.text = "$\(AppData.currentEd.annualRun)"
-        annRunView.statLbl.textColor = AppData.currentEd.annRunColor
-        renewView.statLbl.text = "$\(AppData.currentEd.renewal)"
-        renewView.statLbl.textColor = AppData.currentEd.renewColor
-        retView.statLbl.text = "$\(AppData.currentEd.retention)"
-        retView.statLbl.textColor = AppData.currentEd.retColor
-        lifeValView.statLbl.text = "$\(AppData.currentEd.lifetimeVal)"
-        lifeValView.statLbl.textColor = AppData.currentEd.lifeValColor
-        opCashView.statLbl.text = "$\(AppData.currentEd.opCash)"
-        opCashView.statLbl.textColor = AppData.currentEd.opCashColor
+//        acqView.statLbl.text = "$\(AppData.currentEd.acquisition)"
+//        acqView.statLbl.textColor = AppData.currentEd.acqColor
+//        payView.statLbl.text = "$\(AppData.currentEd.payback)"
+//        payView.statLbl.textColor = AppData.currentEd.payColor
+//        annRunView.statLbl.text = "$\(AppData.currentEd.annualRun)"
+//        annRunView.statLbl.textColor = AppData.currentEd.annRunColor
+//        renewView.statLbl.text = "$\(AppData.currentEd.renewal)"
+//        renewView.statLbl.textColor = AppData.currentEd.renewColor
+//        retView.statLbl.text = "$\(AppData.currentEd.retention)"
+//        retView.statLbl.textColor = AppData.currentEd.retColor
+//        lifeValView.statLbl.text = "$\(AppData.currentEd.lifetimeVal)"
+//        lifeValView.statLbl.textColor = AppData.currentEd.lifeValColor
+//        opCashView.statLbl.text = "$\(AppData.currentEd.opCash)"
+//        opCashView.statLbl.textColor = AppData.currentEd.opCashColor
         
     }
     

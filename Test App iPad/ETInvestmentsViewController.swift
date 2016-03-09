@@ -31,7 +31,8 @@ class ETInvestmentsViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return AppData.edInvestments.count
+//        return AppData.edInvestments.count
+        return 0
     }
     
     // Display all Real Estate investments and metrics (at a glance)
@@ -39,32 +40,32 @@ class ETInvestmentsViewController: UITableViewController {
         let cellIdentifier = "ETInvestmentTableViewCell"
         let cell = tableView.dequeueReusableCellWithIdentifier(cellIdentifier, forIndexPath: indexPath) as! ETInvestmentTableViewCell
         
-        let investment = AppData.edInvestments[indexPath.row]
-        cell.investmentLabel.text = investment.name
-        cell.investmentLabel.font = UIFont.boldSystemFontOfSize(12.0)
-        cell.acqLabel.text = "$\(investment.acquisition)"
-        cell.acqLabel.textColor = investment.acqColor
-        cell.payLabel.text = "$\(investment.payback)"
-        cell.payLabel.textColor = investment.payColor
-        cell.annRunLabel.text = "$\(investment.annualRun)"
-        cell.annRunLabel.textColor = investment.annRunColor
-        cell.renewLabel.text = "$\(investment.renewal)"
-        cell.renewLabel.textColor = investment.renewColor
-        cell.retLabel.text = "$\(investment.retention)"
-        cell.retLabel.textColor = investment.retColor
-        cell.lifeValLabel.text = "$\(investment.lifetimeVal)"
-        cell.lifeValLabel.textColor = investment.lifeValColor
-        cell.opCashLabel.text = "$\(investment.opCash)"
-        cell.opCashLabel.textColor = investment.opCashColor
+//        let investment = AppData.edInvestments[indexPath.row]
+//        cell.investmentLabel.text = investment.name
+//        cell.investmentLabel.font = UIFont.boldSystemFontOfSize(12.0)
+//        cell.acqLabel.text = "$\(investment.acquisition)"
+//        cell.acqLabel.textColor = investment.acqColor
+//        cell.payLabel.text = "$\(investment.payback)"
+//        cell.payLabel.textColor = investment.payColor
+//        cell.annRunLabel.text = "$\(investment.annualRun)"
+//        cell.annRunLabel.textColor = investment.annRunColor
+//        cell.renewLabel.text = "$\(investment.renewal)"
+//        cell.renewLabel.textColor = investment.renewColor
+//        cell.retLabel.text = "$\(investment.retention)"
+//        cell.retLabel.textColor = investment.retColor
+//        cell.lifeValLabel.text = "$\(investment.lifetimeVal)"
+//        cell.lifeValLabel.textColor = investment.lifeValColor
+//        cell.opCashLabel.text = "$\(investment.opCash)"
+//        cell.opCashLabel.textColor = investment.opCashColor
         
         return cell
     }
     
     // Segue to company view when an investment is selected
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        let investment = AppData.edInvestments[indexPath.row]
-        AppData.currentEd = investment
-        self.performSegueWithIdentifier("new2", sender: nil)
+//        let investment = AppData.edInvestments[indexPath.row]
+//        AppData.currentEd = investment
+//        self.performSegueWithIdentifier("new2", sender: nil)
     }
     
     // Create section header

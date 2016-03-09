@@ -14,6 +14,9 @@ class InvestmentTableViewCell: UITableViewCell {
     @IBOutlet var investmentLabel: UILabel!
     @IBOutlet var capLabel: UILabel!
     @IBOutlet var cashLabel: UILabel!
+    @IBOutlet var netLabel: UILabel!
+    @IBOutlet var debtLabel: UILabel!
+    @IBOutlet var opLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

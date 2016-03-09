@@ -14,9 +14,9 @@ import SQLite
 
 struct AppData {
     static var realInvestments = [RealEstate]()
-    static var edInvestments = [EdTech]()
+//    static var edInvestments = [EdTech]()
     static var currentReal = RealEstate()
-    static var currentEd = EdTech()
+//    static var currentEd = EdTech()
     
     static let errorCodes = [
         "CORRUPT EXCEL FILE",
@@ -36,44 +36,53 @@ struct AppData {
         
         switch (metricClass) {
         case ("R1"):
-            low = 4
-            high = 10
+            low = 4.4
+            high = 8
         case ("R2"):
-            low = 1500
-            high = 5000
-        case ("E1"):
-            low = 3000
-            high = 9000
-        case ("E2"):
-            low = 9000
-            high = 15000
-        case ("E3"):
-            low = 2000
-            high = 7000
-        case ("E4"):
-            low = 4000
-            high = 8000
-        case ("E5"):
-            low = 11000
-            high = 30000
-        case ("E6"):
-            low = 6000
-            high = 12000
-        case ("E7"):
-            low = 10000
-            high = 24000
+            low = 6.4
+            high = 10
+        case ("R3"):
+            low = 0
+            high = 0
+        case ("R4"):
+            low = 1.24
+            high = 2
+        case ("R5"): // Values flipped here (low is green, high is red)
+            low = 15
+            high = 30
+//        case ("E1"):
+//            low = 3000
+//            high = 9000
+//        case ("E2"):
+//            low = 9000
+//            high = 15000
+//        case ("E3"):
+//            low = 2000
+//            high = 7000
+//        case ("E4"):
+//            low = 4000
+//            high = 8000
+//        case ("E5"):
+//            low = 11000
+//            high = 30000
+//        case ("E6"):
+//            low = 6000
+//            high = 12000
+//        case ("E7"):
+//            low = 10000
+//            high = 24000
         default:
             print("Invalid Class Type")
         }
         
-        let ave = (low + high) / 2.0
-        let lowAve = (low + ave) / 2.0
-        let highAve = (ave + high) / 2.0
+//        let ave = (low + high) / 2.0
+//        let lowAve = (low + ave) / 2.0
+//        let highAve = (ave + high) / 2.0
         
-        if (metricValue <= lowAve) {
+        if (metricValue <= low || (metricClass == "R5" && metricValue >= high)) {
             return UIColor.redColor()
         }
-        else if (metricValue < highAve) {
+        else if (metricValue < high || (metricClass == "R5" && metricValue > low)) {
             return UIColor(red: 1, green: 0.75, blue: 0, alpha: 1)
         }
         
@@ -107,14 +116,17 @@ struct AppData {
             }
             
             // REAL ESTATE INVESTMENTS
-            var companies = Table("RealEstate")
+            let companies = Table("RealEstate")
             
             let realName = Expression<String>("invName")
             let capRate = Expression<Double>("capRate")
             let cashReturn = Expression<Double>("cashRet")
+            let netOp = Expression<Double>("netOp")
+            let debtCov = Expression<Double>("debtCov")
+            let opExp = Expression<Double>("opExp")
             
             for company in db.prepare(companies) {
-                AppData.realInvestments.append(RealEstate(theName: company[realName], capRate: company[capRate], cashReturn: company[cashReturn]))
+                AppData.realInvestments.append(RealEstate(theName: company[realName], capRate: company[capRate], cashReturn: company[cashReturn], netOp: company[netOp], debtCov: company[debtCov], opExp: company[opExp]))
             }
             for investment in realInvestments {
                 investment.setColor()
@@ -123,27 +135,27 @@ struct AppData {
                 AppData.currentReal = AppData.realInvestments[0]
             }
             
-            // EDUCATION TECHNOLOGY INVESTMENTS
-            companies = Table("EdTech")
-            
-            let edName = Expression<String>("invName")
-            let acquisition = Expression<Double>("acquisition")
-            let payback = Expression<Double>("payback")
-            let annualRun = Expression<Double>("annualRun")
-            let renewal = Expression<Double>("renewal")
-            let retention = Expression<Double>("retention")
-            let lifetimeVal = Expression<Double>("lifetimeVal")
-            let opCash = Expression<Double>("opCash")
-            
-            for company in db.prepare(companies) {
-                AppData.edInvestments.append(EdTech(theName: company[edName], acquisition: company[acquisition], payback: company[payback], annualRun: company[annualRun], renewal: company[renewal], retention: company[retention],  lifetimeVal: company[lifetimeVal], opCash: company[opCash]))
-            }
-            for investment in edInvestments {
-                investment.setColor()
-            }
-            if !AppData.edInvestments.isEmpty {
-                AppData.currentEd = AppData.edInvestments[0]
-            }
+//            // EDUCATION TECHNOLOGY INVESTMENTS
+//            companies = Table("EdTech")
+//            
+//            let edName = Expression<String>("invName")
+//            let acquisition = Expression<Double>("acquisition")
+//            let payback = Expression<Double>("payback")
+//            let annualRun = Expression<Double>("annualRun")
+//            let renewal = Expression<Double>("renewal")
+//            let retention = Expression<Double>("retention")
+//            let lifetimeVal = Expression<Double>("lifetimeVal")
+//            let opCash = Expression<Double>("opCash")
+//            
+//            for company in db.prepare(companies) {
+//                AppData.edInvestments.append(EdTech(theName: company[edName], acquisition: company[acquisition], payback: company[payback], annualRun: company[annualRun], renewal: company[renewal], retention: company[retention],  lifetimeVal: company[lifetimeVal], opCash: company[opCash]))
+//            }
+//            for investment in edInvestments {
+//                investment.setColor()
+//            }
+//            if !AppData.edInvestments.isEmpty {
+//                AppData.currentEd = AppData.edInvestments[0]
+//            }
         }
         catch _ {
             print("Unable to open the database file")

@@ -12,6 +12,9 @@ class CompanyViewController: UIViewController {
     
     @IBOutlet var capRateView: AdminKeyMetricView!
     @IBOutlet var cashRetView: AdminKeyMetricView!
+    @IBOutlet var netOpView: AdminKeyMetricView!
+    @IBOutlet var debtCovView: AdminKeyMetricView!
+    @IBOutlet var opExpView: AdminKeyMetricView!
     @IBOutlet var navBar: UINavigationBar!
 
     override func viewDidLoad() {
@@ -24,15 +27,22 @@ class CompanyViewController: UIViewController {
         let cRad: CGFloat = 92.0
         capRateView.layer.cornerRadius = cRad
         cashRetView.layer.cornerRadius = cRad
-        
-        cashRetView.layer.cornerRadius = cRad
-        cashRetView.layer.cornerRadius = cRad
+        netOpView.layer.cornerRadius = cRad
+        debtCovView.layer.cornerRadius = cRad
+        opExpView.layer.cornerRadius = cRad
         
         // Pull metrics from the current investment
         capRateView.statLbl.text = "\(AppData.currentReal.capRate)%"
         capRateView.statLbl.textColor = AppData.currentReal.capColor
-        cashRetView.statLbl.text = "$\(AppData.currentReal.cashReturn)"
+        cashRetView.statLbl.text = "\(AppData.currentReal.cashReturn)%"
         cashRetView.statLbl.textColor = AppData.currentReal.cashColor
+        netOpView.statLbl.text = "$\(AppData.currentReal.netOp)"
+        netOpView.statLbl.textColor = AppData.currentReal.netColor
+        debtCovView.statLbl.text = "\(AppData.currentReal.debtCov)"
+        debtCovView.statLbl.textColor = AppData.currentReal.debtColor
+        opExpView.statLbl.text = "\(AppData.currentReal.opExp)%"
+        opExpView.statLbl.textColor = AppData.currentReal.opColor
+        
     }
 
     override func didReceiveMemoryWarning() {

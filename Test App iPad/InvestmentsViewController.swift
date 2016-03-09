@@ -41,11 +41,17 @@ class InvestmentsViewController: UITableViewController {
         
         let investment = AppData.realInvestments[indexPath.row]
         cell.investmentLabel.text = investment.name
-        cell.investmentLabel.font = UIFont.boldSystemFontOfSize(17.0)
+        cell.investmentLabel.font = UIFont.boldSystemFontOfSize(14.0)
         cell.capLabel.text = "\(investment.capRate)%"
         cell.capLabel.textColor = investment.capColor
-        cell.cashLabel.text = "$\(investment.cashReturn)"
+        cell.cashLabel.text = "\(investment.cashReturn)%"
         cell.cashLabel.textColor = investment.cashColor
+        cell.netLabel.text = "$\(investment.netOp)"
+        cell.netLabel.textColor = investment.netColor
+        cell.debtLabel.text = "\(investment.debtCov)"
+        cell.debtLabel.textColor = investment.debtColor
+        cell.opLabel.text = "\(investment.opExp)%"
+        cell.opLabel.textColor = investment.opColor
 
         return cell
     }
@@ -64,13 +70,22 @@ class InvestmentsViewController: UITableViewController {
         
         headerCell.investmentLabel.text = "Investment"
         headerCell.investmentLabel.textColor = UIColor.whiteColor()
-        headerCell.investmentLabel.font = UIFont.boldSystemFontOfSize(17.0)
+        headerCell.investmentLabel.font = UIFont.boldSystemFontOfSize(14.0)
         headerCell.capLabel.text = "Cap Rate"
         headerCell.capLabel.textColor = UIColor.whiteColor()
-        headerCell.capLabel.font = UIFont.boldSystemFontOfSize(17.0)
+        headerCell.capLabel.font = UIFont.boldSystemFontOfSize(14.0)
         headerCell.cashLabel.text = "Cash Return"
         headerCell.cashLabel.textColor = UIColor.whiteColor()
-        headerCell.cashLabel.font = UIFont.boldSystemFontOfSize(17.0)
+        headerCell.cashLabel.font = UIFont.boldSystemFontOfSize(14.0)
+        headerCell.netLabel.text = "Net Op Income"
+        headerCell.netLabel.textColor = UIColor.whiteColor()
+        headerCell.netLabel.font = UIFont.boldSystemFontOfSize(14.0)
+        headerCell.debtLabel.text = "Debt Coverage"
+        headerCell.debtLabel.textColor = UIColor.whiteColor()
+        headerCell.debtLabel.font = UIFont.boldSystemFontOfSize(14.0)
+        headerCell.opLabel.text = "Op Expense"
+        headerCell.opLabel.textColor = UIColor.whiteColor()
+        headerCell.opLabel.font = UIFont.boldSystemFontOfSize(14.0)
         
         return headerCell
     }

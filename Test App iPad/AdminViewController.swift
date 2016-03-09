@@ -14,6 +14,9 @@ class AdminViewController: UIViewController {
 //    @IBOutlet var edTechView: UIView!
     @IBOutlet var realCapRateView: AdminKeyMetricView!
     @IBOutlet var realCashRetView: AdminKeyMetricView!
+    @IBOutlet var realNetOpView: AdminKeyMetricView!
+    @IBOutlet var realDebtCovView: AdminKeyMetricView!
+    @IBOutlet var realOpExpView: AdminKeyMetricView!
 //    @IBOutlet var edCACView: AdminKeyMetricView!
 //    @IBOutlet var edPPView: AdminKeyMetricView!
 //    @IBOutlet var edRRRView: AdminKeyMetricView!
@@ -27,18 +30,15 @@ class AdminViewController: UIViewController {
         super.viewDidLoad()
         
         // Build UIView Arrays
-        var catViewArr: [UIView] = []
-        catViewArr += [realEstateView!/*, edTechView!*/]
         var metViewArr: [UIView] = []
-        metViewArr += [realCapRateView!, realCashRetView!/*, edCACView!, edPPView!,
+        metViewArr += [realCapRateView!, realCashRetView!, realNetOpView!, realDebtCovView!, realOpExpView!/*, edCACView!, edPPView!,
             edRRRView!, edRenewView!, edRetView!, edCLVView!, edOpCashView!*/]
         
         let cRadius: CGFloat = 20.0
         
-        // Add Corner Radius to Views
-        for view in catViewArr {
-            view.layer.cornerRadius = cRadius
-        }
+        // Add Corner Radius and Borders to Views
+        realEstateView.layer.cornerRadius = cRadius
+        
         for view in metViewArr {
             view.layer.borderWidth = 2;
         }
@@ -63,8 +63,32 @@ class AdminViewController: UIViewController {
             sum += investment.cashReturn
         }
         ave = sum / realCount
-        realCashRetView.statLbl.text = String(format: "$%.2f%", ave)
+        realCashRetView.statLbl.text = String(format: "%.2f%%", ave)
         realCashRetView.statLbl.textColor = AppData.calcColor("R2", metricValue: ave)
+        
+        sum = 0.0
+        for investment in AppData.realInvestments {
+            sum += investment.netOp
+        }
+        ave = sum / realCount
+        realNetOpView.statLbl.text = String(format: "$%.2f%", ave)
+        realNetOpView.statLbl.textColor = AppData.calcColor("R3", metricValue: ave)
+        
+        sum = 0.0
+        for investment in AppData.realInvestments {
+            sum += investment.debtCov
+        }
+        ave = sum / realCount
+        realDebtCovView.statLbl.text = String(format: "%.2f%", ave)
+        realDebtCovView.statLbl.textColor = AppData.calcColor("R4", metricValue: ave)
+        
+        sum = 0.0
+        for investment in AppData.realInvestments {
+            sum += investment.opExp
+        }
+        ave = sum / realCount
+        realOpExpView.statLbl.text = String(format: "%.2f%%", ave)
+        realOpExpView.statLbl.textColor = AppData.calcColor("R5", metricValue: ave)
         
         // Education Technology
 //        sum = 0.0
