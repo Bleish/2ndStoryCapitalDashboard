@@ -18,8 +18,14 @@ class LogInViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
-        if (AppData.currentError != -1) {
-            errorDisplay.text = AppData.errorCodes[AppData.currentError];
+        let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
+        dispatch_async(dispatch_get_global_queue(priority, 0)) {
+            AppData.pullData()
+            dispatch_async(dispatch_get_main_queue()) {
+                if (AppData.currentError != -1) {
+                    self.errorDisplay.text = AppData.errorCodes[AppData.currentError];
+                }
+            }
         }
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("textBeginEdit:"), name:UITextFieldTextDidBeginEditingNotification, object: nil);

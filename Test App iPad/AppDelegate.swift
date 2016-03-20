@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationBarAppearace.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.whiteColor()]  // Title's text color
         
         // Pull Investment Data
-        AppData.pullData()
+//        AppData.pullData()
         
         return true
     }
