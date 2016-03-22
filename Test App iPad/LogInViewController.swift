@@ -13,17 +13,28 @@ class LogInViewController: UIViewController {
     @IBOutlet var userTextField: UITextField!
     @IBOutlet var passTextField: UITextField!
     @IBOutlet var errorDisplay: UILabel!
+    @IBOutlet var logCheck: UILabel!
+    @IBOutlet var timeStamp: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view, typically from a nib.
+        errorDisplay.text = "LOADING . . ."
         let priority = DISPATCH_QUEUE_PRIORITY_DEFAULT
         dispatch_async(dispatch_get_global_queue(priority, 0)) {
-            AppData.pullData()
-            dispatch_async(dispatch_get_main_queue()) {
-                if (AppData.currentError != -1) {
-                    self.errorDisplay.text = AppData.errorCodes[AppData.currentError];
+            AppData.pullData() { (success) -> () in
+                if (success) {
+                    dispatch_async(dispatch_get_main_queue()) {
+                        self.timeStamp.text = "Last updated: " + AppData.timestamp
+                        
+                        if (AppData.currentError != -1) {
+                            self.errorDisplay.text = AppData.errorCodes[AppData.currentError];
+                        }
+                        else {
+                            self.errorDisplay.text = ""
+                        }
+                    }
                 }
             }
         }
@@ -54,7 +65,7 @@ class LogInViewController: UIViewController {
             performSegueWithIdentifier("signIn", sender: nil)
         }
         else {
-            errorDisplay.text = "Invalid Username or Password"
+            logCheck.text = "Invalid Username or Password"
         }
     }
 

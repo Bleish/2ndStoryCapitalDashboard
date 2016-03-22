@@ -55,6 +55,18 @@
                                             <action selector="signIn:" destination="AZT-x7-w2h" eventType="primaryActionTriggered" id="haZ-v4-XOl"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pB-LB-un1">
+                                        <rect key="frame" x="0.0" y="185" width="400" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uki-n7-JYX">
+                                        <rect key="frame" x="0.0" y="24" width="400" height="21"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dashboard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUs-od-JyG">
@@ -76,7 +88,9 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="errorDisplay" destination="FO0-8a-z32" id="GM3-zL-I6v"/>
+                        <outlet property="logCheck" destination="0pB-LB-un1" id="m08-WK-Zpt"/>
                         <outlet property="passTextField" destination="P35-Hf-2Su" id="CAc-mx-xGx"/>
+                        <outlet property="timeStamp" destination="Uki-n7-JYX" id="JiY-ZW-0kq"/>
                         <outlet property="userTextField" destination="rpz-1L-OV0" id="he5-3G-T4B"/>
                         <segue destination="UaQ-L7-uIq" kind="presentation" identifier="signIn" id="tB2-lE-WKi"/>
                     </connections>
@@ -964,9 +978,9 @@
         <image name="2nd Story Capital Logo" width="794" height="149"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="do1-p5-to2"/>
         <segue reference="NW9-A6-keg"/>
-        <segue reference="VmK-8y-dLA"/>
+        <segue reference="tB2-lE-WKi"/>
+        <segue reference="do1-p5-to2"/>
         <segue reference="UW2-LW-goW"/>
     </inferredMetricsTieBreakers>
 </document>
