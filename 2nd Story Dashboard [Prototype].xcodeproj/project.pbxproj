@@ -10,9 +10,6 @@
 		DF5175E71C0CEA8F0058F93C /* Investment.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5175E61C0CEA8F0058F93C /* Investment.swift */; };
 		DF5175E91C0CF5D80058F93C /* AppData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF5175E81C0CF5D80058F93C /* AppData.swift */; };
 		DF68F33A1C042CB400B91DE9 /* AdminKeyMetricView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF68F3391C042CB400B91DE9 /* AdminKeyMetricView.swift */; };
-		DFA23F871C1568A1002EF0D2 /* ETInvestmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA23F861C1568A1002EF0D2 /* ETInvestmentsViewController.swift */; };
-		DFA23F911C1568C2002EF0D2 /* ETInvestmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA23F901C1568C2002EF0D2 /* ETInvestmentTableViewCell.swift */; };
-		DFA23F931C15768B002EF0D2 /* ETCompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA23F921C15768B002EF0D2 /* ETCompanyViewController.swift */; };
 		DFAFD2871BD5FFAE00ED164F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFAFD2861BD5FFAE00ED164F /* Images.xcassets */; };
 		DFAFD28B1BD60EE700ED164F /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFD28A1BD60EE700ED164F /* AdminViewController.swift */; };
 		DFBC87571BD5EAC00028E0EF /* Images in Resources */ = {isa = PBXBuildFile; fileRef = DFBC87561BD5EAC00028E0EF /* Images */; };
@@ -129,9 +126,6 @@
 		DF5175E81C0CF5D80058F93C /* AppData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppData.swift; sourceTree = "<group>"; };
 		DF648F1F1C155378006367AC /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = "../Swift Libraries & Frameworks/SQLite.swift-master/SQLite.xcodeproj"; sourceTree = "<group>"; };
 		DF68F3391C042CB400B91DE9 /* AdminKeyMetricView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminKeyMetricView.swift; sourceTree = "<group>"; };
-		DFA23F861C1568A1002EF0D2 /* ETInvestmentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETInvestmentsViewController.swift; sourceTree = "<group>"; };
-		DFA23F901C1568C2002EF0D2 /* ETInvestmentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETInvestmentTableViewCell.swift; sourceTree = "<group>"; };
-		DFA23F921C15768B002EF0D2 /* ETCompanyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ETCompanyViewController.swift; sourceTree = "<group>"; };
 		DFAFD2861BD5FFAE00ED164F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DFAFD28A1BD60EE700ED164F /* AdminViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		DFBC87561BD5EAC00028E0EF /* Images */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Images; sourceTree = "<group>"; };
@@ -224,9 +218,6 @@
 				DFEA95351BD4BE120084B398 /* AppDelegate.swift */,
 				DFEA95371BD4BE120084B398 /* LogInViewController.swift */,
 				DFEA95391BD4BE120084B398 /* Main.storyboard */,
-				DFA23F921C15768B002EF0D2 /* ETCompanyViewController.swift */,
-				DFA23F861C1568A1002EF0D2 /* ETInvestmentsViewController.swift */,
-				DFA23F901C1568C2002EF0D2 /* ETInvestmentTableViewCell.swift */,
 				DFEF3B731BD71D4A002467B3 /* CompanyViewController.swift */,
 				DFE63FF81BD6231E003F3608 /* InvestmentsViewController.swift */,
 				DFE63FF61BD61FA3003F3608 /* InvestmentTableViewCell.swift */,
@@ -464,10 +455,7 @@
 				DF5175E71C0CEA8F0058F93C /* Investment.swift in Sources */,
 				DFAFD28B1BD60EE700ED164F /* AdminViewController.swift in Sources */,
 				DFEA95381BD4BE120084B398 /* LogInViewController.swift in Sources */,
-				DFA23F931C15768B002EF0D2 /* ETCompanyViewController.swift in Sources */,
 				DF5175E91C0CF5D80058F93C /* AppData.swift in Sources */,
-				DFA23F871C1568A1002EF0D2 /* ETInvestmentsViewController.swift in Sources */,
-				DFA23F911C1568C2002EF0D2 /* ETInvestmentTableViewCell.swift in Sources */,
 				DFE63FF91BD6231E003F3608 /* InvestmentsViewController.swift in Sources */,
 				DFEA95361BD4BE120084B398 /* AppDelegate.swift in Sources */,
 				DFEF3B741BD71D4A002467B3 /* CompanyViewController.swift in Sources */,
