@@ -67,11 +67,11 @@ struct AppData {
     {
         let dirPaths =  NSSearchPathForDirectoriesInDomains(.DocumentDirectory,.UserDomainMask, true)
         let docsDir = dirPaths[0]
-        let destPath = (docsDir as NSString).stringByAppendingPathComponent("/dummyData.db")
+        let destPath = (docsDir as NSString).stringByAppendingPathComponent("/cacheData.db")
         
         let fileMgr = NSFileManager.defaultManager()
         
-        if let path = NSBundle.mainBundle().pathForResource("dummyData", ofType:"db") {
+        if let path = NSBundle.mainBundle().pathForResource("cacheDefault", ofType:"db") {
             print(path)
             do {
                 try fileMgr.copyItemAtPath(path, toPath: destPath)
@@ -117,7 +117,7 @@ struct AppData {
         let opExp = Expression<Double>("opExp")
         
         // LINK TO REMOTE DATABASE
-        let requestURL: NSURL = NSURL(string: "http://dbtest.192.168.1.3.xip.io/dummyData.php")!
+        let requestURL: NSURL = NSURL(string: "http://dbtest.192.168.1.3.xip.io/remoteData.php")!
         let urlRequest: NSMutableURLRequest = NSMutableURLRequest(URL: requestURL)
         let session = NSURLSession.sharedSession()
         let task = session.dataTaskWithRequest(urlRequest) {
@@ -197,7 +197,7 @@ struct AppData {
                                 .DocumentDirectory, .UserDomainMask, true
                                 ).first!
                             
-                            let db = try Connection("\(path)/dummyData.db")
+                            let db = try Connection("\(path)/cacheData.db")
                             
                             // UPDATE LOCAL DATABASE
                             try db.run(information.drop(ifExists: true))
@@ -275,7 +275,7 @@ struct AppData {
         if (true) {
             let path = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as String
             let url = NSURL(fileURLWithPath: path)
-            let filePath = url.URLByAppendingPathComponent("dummyData.db").absoluteString
+            let filePath = url.URLByAppendingPathComponent("cacheData.db").absoluteString
             let fileManager = NSFileManager.defaultManager()
             if fileManager.fileExistsAtPath(filePath) {
                 print("FILE AVAILABLE")
@@ -289,9 +289,9 @@ struct AppData {
                     .DocumentDirectory, .UserDomainMask, true
                     ).first!
                 
-                let db = try Connection("\(path)/dummyData.db")
+                let db = try Connection("\(path)/cacheData.db")
                 
-                if let info = try db.pluck(information) {
+                if let info = db.pluck(information) {
                     username = info[user]
                     password = info[pass]
                     timestamp = info[time]

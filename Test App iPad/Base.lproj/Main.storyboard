@@ -12,7 +12,7 @@
                         <viewControllerLayoutGuide type="top" id="2TX-Hw-F8F"/>
                         <viewControllerLayoutGuide type="bottom" id="SgI-8f-69h"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="3J3-DL-EFE" customClass="circle">
+                    <view key="view" contentMode="scaleToFill" id="3J3-DL-EFE">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -247,7 +247,7 @@
                                 <color key="barTintColor" red="0.75686274509999996" green="0.1529411765" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="Overview" id="9IW-Rm-aH8">
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="34s-9W-tFL">
+                                        <barButtonItem key="rightBarButtonItem" id="34s-9W-tFL">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3j6-kH-qyJ">
                                                 <rect key="frame" x="948" y="7" width="56" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -304,7 +304,7 @@
                                 <color key="barTintColor" red="0.75686274509999996" green="0.1529411765" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
                                 <items>
                                     <navigationItem title="Real Estate Company View" id="NAD-UG-s9u">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" id="JcC-6P-bsY">
+                                        <barButtonItem key="leftBarButtonItem" id="JcC-6P-bsY">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="L55-cK-7vn">
                                                 <rect key="frame" x="20" y="7" width="178" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -317,7 +317,7 @@
                                                 </connections>
                                             </button>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" id="ago-rB-4f5">
+                                        <barButtonItem key="rightBarButtonItem" id="ago-rB-4f5">
                                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ot1-xs-UpG">
                                                 <rect key="frame" x="948" y="7" width="56" height="30"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -542,7 +542,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Real Estate Investments" id="Ug9-1X-fEs">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="Pqm-dE-OGH">
+                        <barButtonItem key="leftBarButtonItem" id="Pqm-dE-OGH">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XOD-4p-hib">
                                 <rect key="frame" x="20" y="7" width="142" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -555,7 +555,7 @@
                                 </connections>
                             </button>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="qgU-H2-iJi">
+                        <barButtonItem key="rightBarButtonItem" id="qgU-H2-iJi">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="L8c-sc-3xr">
                                 <rect key="frame" x="948" y="7" width="56" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -606,7 +606,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="NW9-A6-keg"/>
-        <segue reference="tB2-lE-WKi"/>
-        <segue reference="do1-p5-to2"/>
+        <segue reference="VmK-8y-dLA"/>
+        <segue reference="EGC-cy-X9X"/>
     </inferredMetricsTieBreakers>
 </document>
